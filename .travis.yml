@@ -1,0 +1,16 @@
+services:
+  - docker
+
+script:
+  - docker build -t albrightlions/client:latest .
+
+deploy:
+  provider: script
+  script: bash travis_dockerpush.sh
+  on:
+    branch: master
+  skip_cleanup: true
+
+env:
+  global:
+    - DOCKER_USERNAME=chris13524
