@@ -12,4 +12,5 @@ FROM nginx:1.15.3
 
 COPY --from=0 /app/dist/browser/ /usr/share/nginx/html
 COPY --from=0 /tmp/app.html /usr/share/nginx/html/
+COPY src/robots.txt /usr/share/nginx/html/robots.txt
 COPY --from=0 /app/nginx.conf /etc/nginx/conf.d/default.conf
