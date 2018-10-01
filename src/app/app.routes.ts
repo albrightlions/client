@@ -1,10 +1,15 @@
 import {RouterModule, Routes} from "@angular/router";
 import {NgModule} from "@angular/core";
 import {NotFoundComponent} from "./notFound/notFound.component";
-import {HomeComponent} from "./home/home.component";
+import {HomeComponent} from "./main/home/home.component";
+import {MainComponent} from "./main/main.component";
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
+  {
+    path: "", component: MainComponent, children: [
+      {path: "", component: HomeComponent}
+    ]
+  },
   {path: "**", component: NotFoundComponent},
 ];
 

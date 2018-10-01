@@ -34,7 +34,9 @@
     "core-js": "^2.5.4",
     "rxjs": "~6.2.0",
     "ts-loader": "^5.2.1",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "@ng-bootstrap/ng-bootstrap": "^3.2.2",
+    "bootstrap": "4.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
